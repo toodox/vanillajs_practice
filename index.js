@@ -52,3 +52,9 @@
 
     console.log(`The result:\n plus = ${plus}\n minus = ${minus}\n mult = ${mult}\n div = ${div} \n pow = ${pow} \n`);
 
+//#2.2 JS DOM Functions
+    const title = document.getElementById("title");
+
+    console.log(title);
+
+    title.innerHTML = "Hi! From JS"; // title(=h1) 을 바꿈
