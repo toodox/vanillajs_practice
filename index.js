@@ -30,7 +30,7 @@
 
     const calculator = {
        plus: function(a, b){
-           return a+b;
+           return a+b; //구조체 안에 함수 넣기
        },
        sub: function(a, b){
            return a-b;
