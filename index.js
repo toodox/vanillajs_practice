@@ -71,7 +71,7 @@
     //#2.3 Modifying the DOM with JS
     //id title에서 모든 가능성 보여주기
 
-    title.style.color = "green"; // 폰트 색 변경
+    title.style.color = "white"; // 폰트 색 변경
     document.title = "I own you now"; // 탭 이름 변경
     console.dir(document); // 바꿀 수 있는 것들 목록을 보여줌
 
