@@ -61,17 +61,24 @@
     /*
         DOM : Document Object Model >> HTML 모든 요소를 객체(object로 바꿀 수 있음)
     */
-    const title = document.getElementById("title");
+    const title = document.getElementById("title"); 
+    //HTML 아이디에서 추출해서 자바스크립트에 변수에 대입
+    const subtitle = document.querySelector(".subtitle");
+    //HTML class에서 추출해서 자바스크립트 변수에 대입
+
+    window.addEventListener("resize");
 
     console.log(title);
 
     title.innerHTML = "Hi! From JS"; // title(=h1) 을 바꿈
-
+    subtitle.innerHTML = "i dont understand"
 
     //#2.3 Modifying the DOM with JS
     //id title에서 모든 가능성 보여주기
 
+    subtitle.style.color = "yellow";
     title.style.color = "white"; // 폰트 색 변경
-    document.title = "I own you now"; // 탭 이름 변경
+    document.title = "e gae mo nya"; // 탭 이름 변경
     console.dir(document); // 바꿀 수 있는 것들 목록을 보여줌
+
 
