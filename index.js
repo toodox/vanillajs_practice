@@ -78,7 +78,7 @@
     const subtitle = document.querySelector(".subtitle");
     //HTML class에서 추출해서 자바스크립트 변수에 대입
 
-    subtitle.innerHTML = "i dont understand"
+    subtitle.innerHTML = "Click me!!"
     subtitle.style.color = "yellow";
 
 
@@ -94,7 +94,7 @@
     */
     
    function handleClick(event){
-    subtitle.style.color="#fd0f2b"; //클릭 시 색상 변경
+    subtitle.style.color="#34495e"; //클릭 시 색상 변경
     //console.log("I have been clicked");
     }
     window.addEventListener("click", handleClick);
