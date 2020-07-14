@@ -11,7 +11,7 @@
     //#2.1 More Function
     function sayInfo(tomato, apple){
        //console.log(`Hello ${tomato} you are ${apple} years old.`); 
-       return `Hello ${tomato} you are ${apple} years old`;
+        return `Hello ${tomato} you are ${apple} years old`;
        //sayHello 함수는 어떤 값을 반환하지만, console.log로 찍어주지 않음.
        //따라서 나중에 console.log를 찍어줘야 확인 가능
     }
@@ -29,23 +29,23 @@
     */
 
     const calculator = {
-       plus: function(a, b){
-           return a+b; //구조체 안에 함수 넣기
-       },
-       sub: function(a, b){
-           return a-b;
-       },
-       mult: function(a, b){
-           return a*b;
-       },
-       div: function(a, b){
-           return a/b;
-       },
-       pow: function(a, b){
-           return a**b;
-       }
+        plus: function(a, b){
+            return a+b; //구조체 안에 함수 넣기
+        },
+        sub: function(a, b){
+            return a-b;
+        },
+        mult: function(a, b){
+            return a*b;
+        },
+        div: function(a, b){
+            return a/b;
+        },
+        pow: function(a, b){
+            return a**b;
+        }
     }
- 
+
     const plus = calculator.plus(5, 5);
     const sub = calculator.sub(8, 3);
     const mult = calculator.mult(4, 6);
@@ -67,6 +67,8 @@
     console.log(title);
 
     title.innerHTML = "Hi! From JS"; // title(=h1) 을 바꿈
+
+
 
     //#2.3 Modifying the DOM with JS
     //id title에서 모든 가능성 보여주기
@@ -93,8 +95,26 @@
             ->창 사이즈 변경 하면 로그에 뜸
     */
     
-   function handleClick(event){
-    subtitle.style.color="#34495e"; //클릭 시 색상 변경
+    function handleClick(event){
+    subtitle.style.color = "#34495e"; //클릭 시 색상 변경
     //console.log("I have been clicked");
     }
     window.addEventListener("click", handleClick);
+
+
+    //2.5 if, else, and, or
+
+    if("nicolas" === "necolas"){
+        console.log("hi");
+    } else if ("10"==="10"){
+        console.log("same!!");
+    } else {
+        console.log("ho");
+    }
+
+    //combine(피연산자)
+    if(20>5 && "junn"==="junn") { //and 연산자 && 활용
+        console.log("yes!");
+    } else {
+        console.log("no!");
+    }
