@@ -106,7 +106,7 @@
 
     if("nicolas" === "necolas"){
         console.log("hi");
-    } else if ("10"==="10"){
+    } else if ("10" === "10"){
         console.log("same!!");
     } else {
         console.log("ho");
