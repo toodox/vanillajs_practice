@@ -13,17 +13,17 @@ function sayInfo(tomato, apple) {
   //따라서 나중에 console.log를 찍어줘야 확인 가능
 }
 /*
-            원래는 console.log("hello" + tomato + "is" + apple + "old");
-            이렇게 했는데, 백틱을 사용해서 +기호와 띄어쓰기 신경 쓸 필요 없이
-            작성할 수 있게 됨.
-        */
+    원래는 console.log("hello" + tomato + "is" + apple + "old");
+    이렇게 했는데, 백틱을 사용해서 +기호와 띄어쓰기 신경 쓸 필요 없이
+    작성할 수 있게 됨.
+*/
 
 const greetJunn = sayInfo("Junn", 23); //greetJunn은 sayInfo 함수의 리턴값
 console.log(greetJunn);
 /*
-            23번째줄을 보면 greetJunn 변수는 sayInfo 함수의 리턴값이 필요하므로
-            14번째 줄 처럼 console.log 대신 return 을 표기해 주어야 함.
-        */
+    2번째줄을 보면 greetJunn 변수는 sayInfo 함수의 리턴값이 필요하므로
+    14번째 줄 처럼 console.log 대신 return 을 표기해 주어야 함.
+*/
 
 const calculator = {
   plus: function (a, b) {
@@ -55,8 +55,8 @@ console.log(
 
 //#2.2 JS DOM Functions
 /*
-            DOM : Document Object Model >> HTML 모든 요소를 객체(object로 바꿀 수 있음)
-        */
+    DOM : Document Object Model >> HTML 모든 요소를 객체(object로 바꿀 수 있음)
+*/
 const title = document.getElementById("title");
 //HTML 아이디에서 추출해서 자바스크립트에 변수에 대입
 
@@ -68,28 +68,28 @@ title.innerHTML = "Hi! From JS"; // title(=h1) 을 바꿈
 //id title에서 모든 가능성 보여주기
 
 title.style.color = "white"; // 폰트 색 변경
-document.title = "e gae mo nya"; // 탭 이름 변경
+document.title = "Idntundrstnd"; // 탭 이름 변경
 console.dir(document); // 바꿀 수 있는 것들 목록을 보여줌
 
 const subtitle = document.querySelector(".subtitle");
 //HTML class에서 추출해서 자바스크립트 변수에 대입
 
 subtitle.innerHTML = "Click me!!";
-subtitle.style.color = "yellow";
+subtitle.style.color = "#05c46b";
 
 //#2.4 Events and event handlers
 
 /*
-        function handleResize(event){
-            console.log(event);
-            //console.log("I have been resized");
-        }
-        window.addEventListener("click", handleResize); //handleResize() <이거 안됨
-                ->창 사이즈 변경 하면 로그에 뜸
-        */
+    function handleResize(event){
+        console.log(event);
+        //console.log("I have been resized");
+    }
+    window.addEventListener("click", handleResize); //handleResize() <이거 안됨
+    ->창 사이즈 변경 하면 로그에 뜸
+*/
 
-function handleClick(event) {
-  subtitle.style.color = "#34495e"; //클릭 시 색상 변경
+function handleClickOne(event) {
+  subtitle.style.color = "#ef5777"; //클릭 시 색상 변경
   //console.log("I have been clicked");
 }
 window.addEventListener("click", handleClick);
@@ -97,7 +97,7 @@ window.addEventListener("click", handleClick);
 //2.5 if, else, and, or
 
 if ("junn" === "joonn") {
-  /*'=='와 '==='의 차이는 ===이 더 엄격하다는 것 (type 까지 신경 씀)*/
+  /* '=='와 '==='의 차이는 ===이 더 엄격하다는 것 (type 까지 신경 씀) */
   console.log("hi");
 } else if ("10" === "10") {
   console.log("same!!");
@@ -124,4 +124,22 @@ if (20 > 5 && "junn" === "junn") {
     } else {
       console.log("too young");
     }
-  */
+*/
+
+//#2.6 DOM - If else - Function practice
+
+const titleTwo = document.querySelector("#titleTwo");
+
+const BASE_COLOR = "#b71540";
+const OTHER_COLOR = "#7f8c8d";
+
+function handleClickTwo() {
+  titleTwo.style.color = "green";
+}
+
+function init() {
+  titleTwo.style.color = BASE_COLOR;
+  titleTwo.addEventListener("click", handleClickTwo);
+}
+
+init();
