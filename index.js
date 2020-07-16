@@ -96,7 +96,8 @@ window.addEventListener("click", handleClick);
 
 //2.5 if, else, and, or
 
-if ("nicolas" === "necolas") {
+if ("junn" === "joonn") {
+  /*'=='와 '==='의 차이는 ===이 더 엄격하다는 것 (type 까지 신경 씀)*/
   console.log("hi");
 } else if ("10" === "10") {
   console.log("same!!");
@@ -105,9 +106,22 @@ if ("nicolas" === "necolas") {
 }
 
 //combine(피연산자)
+//관계연산자는 &&(and), ||(or) 등이 있음
 if (20 > 5 && "junn" === "junn") {
   //and 연산자 && 활용
   console.log("yes!");
 } else {
   console.log("no!");
 }
+
+/*
+    //prompt 활용 if-else 실습
+    const age = prompt("How old are you?");
+    if (age >= 18 && age <= 21) {
+      console.log("you can drink but you should not");
+    } else if (age > 21) {
+      console.log("Go ahead!");
+    } else {
+      console.log("too young");
+    }
+  */
