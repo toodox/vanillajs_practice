@@ -68,14 +68,14 @@ title.innerHTML = "Hi! From JS"; // title(=h1) 을 바꿈
 //id title에서 모든 가능성 보여주기
 
 title.style.color = "white"; // 폰트 색 변경
-document.title = "Idntundrstnd"; // 탭 이름 변경
+document.title = "Junn | Change title name by JS"; // 탭 이름 변경
 console.dir(document); // 바꿀 수 있는 것들 목록을 보여줌
 
 const subtitle = document.querySelector(".subtitle");
 //HTML class에서 추출해서 자바스크립트 변수에 대입
 
 subtitle.innerHTML = "Click me!!";
-subtitle.style.color = "#05c46b";
+subtitle.style.color = "#05c46b"; //원래색(silver를 JS로 바꿔 놓음.)
 
 //#2.4 Events and event handlers
 
@@ -90,9 +90,10 @@ subtitle.style.color = "#05c46b";
 
 function handleClickOne(event) {
   subtitle.style.color = "#ef5777"; //클릭 시 색상 변경
-  //console.log("I have been clicked");
+  console.log("you have been clicked subtitle"); //subtitle 누르면 콘솔창에 문구 생성
 }
-window.addEventListener("click", handleClick);
+subtitle.addEventListener("click", handleClickOne);
+//subtitle 대신 window라고 입력하고 실행시키면, 그냥 창 클릭만으로도 콘솔창에 알림이 뜸.
 
 //2.5 if, else, and, or
 
@@ -102,14 +103,14 @@ if ("junn" === "joonn") {
 } else if ("10" === "10") {
   console.log("same!!");
 } else {
-  console.log("ho");
+  console.log("different");
 }
 
 //combine(피연산자)
 //관계연산자는 &&(and), ||(or) 등이 있음
 if (20 > 5 && "junn" === "junn") {
   //and 연산자 && 활용
-  console.log("yes!");
+  console.log("equal!");
 } else {
   console.log("no!");
 }
@@ -129,17 +130,49 @@ if (20 > 5 && "junn" === "junn") {
 //#2.6 DOM - If else - Function practice
 
 const titleTwo = document.querySelector("#titleTwo");
+// const 변수 생성하고 html문서 id를 따와서 대입함.
 
-const BASE_COLOR = "#b71540";
-const OTHER_COLOR = "#7f8c8d";
+const BASE_COLOR = "rgb(183, 21, 64)";
+/*
+    대문자로 변수를 생성해서 css에 있는 기본 색상을 대입함.
+*/
+const OTHER_COLOR = "#273c75";
+// flatuicolors.com << 여기서 css 색상 헥사코드 따올 수 있음
 
 function handleClickTwo() {
-  titleTwo.style.color = "green";
+  /*   console.log(titleTwo.style.color); //titleTwo 를 누르면 누르기 전 색상 rgb값 출력
+  titleTwo.style.color = OTHER_COLOR; */
+
+  const currentColor = titleTwo.style.color;
+  if (currentColor === BASE_COLOR) {
+    titleTwo.style.color = OTHER_COLOR;
+  } else {
+    titleTwo.style.color = BASE_COLOR;
+  }
 }
 
 function init() {
   titleTwo.style.color = BASE_COLOR;
   titleTwo.addEventListener("click", handleClickTwo);
+  //click 대신 mouseenter로 하면 마우스 갖다댈때마다 색깔이 바뀜.(hover랑 비슷)
+  /*
+    구글에 HTML JavaScript DOM event MDN 치면 이벤트들 검색 가능
+  */
+  //addEventListener 란 document 내의 특정 요소에 event를 등록할때 사용하는 것이다.
 }
 
-init();
+init(); //함수 실행.
+
+//HTML JAvaScript DOM event MDN 구글링해서 나온거 실습
+//인터넷 연결되어 있으면 online 문구 출력, 아니면 인터넷 키라고 알림.
+function handleOffline() {
+  if ("offline") {
+    console.log("It's Online");
+  } else {
+    console.log("plz turn on wifi");
+  }
+}
+window.addEventListener("offline", handleOffline);
+//online > offline로 변경하면 인터넷 연결 안될 때 "lalalala" 콘솔창에 출력
+
+handleOffline();
