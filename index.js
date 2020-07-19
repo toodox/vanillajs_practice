@@ -183,16 +183,37 @@ const titleThree = document.querySelector("#titleThree");
 
 const CLICKED_CLASS = "clicked";
 
-function handleClickThree() {
-  const currentClass = titleThree.className;
-  if (currentClass !== CLICKED_CLASS) {
-    titleThree.className = CLICKED_CLASS;
-  } else {
-    titleThree.className = "";
-  }
-}
+/*
+    function handleClickThree() {
+      const currentClass = titleThree.className;
+      if (currentClass !== CLICKED_CLASS) {
+        titleThree.className = CLICKED_CLASS;
+      } else {
+        titleThree.className = "";
+      }
+    }
+*/
+/*
+    처음에는 위 방식대로 했는데, html에 클래스를 지정하고, 브라우저에서 실행하면
+    클릭 시에, 기존에 있던 클래스명이 사라지는 현상 발생. 따라서 아래 코드로 변경해서 실행한다.
 
-handleClickThree();
+*/
+function handleClickThree() {
+  const hasClass = titleThree.classList.contains(CLICKED_CLASS);
+  // titleThree의 classList에서 CLICKED_CLASS가 포함되었는지 검색하고 변수 선언한 hasClass에 대입
+  if (!hasClass) {
+    // hasClass가 아니면 (classList에 CLICKED_CLASS가 없으면)
+    titleThree.classList.add(CLICKED_CLASS); //CLICKED_CLASS 추가
+  } else {
+    //CLICKED_CLASS가 있다면
+    titleThree.classList.remove(CLICKED_CLASS); //CLICKED_CLASS 제거
+  }
+  /*
+  202줄~210줄 다 줄이면
+  titleThree.classList.toggle(CLICKED_CLASS);
+  이렇게 코딩 가능 (toggle)
+  */
+}
 
 function initTwo() {
   titleThree.addEventListener("click", handleClickThree);

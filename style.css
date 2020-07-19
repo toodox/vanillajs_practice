@@ -19,3 +19,11 @@ h3{
 .clicked { /*css 내에 클래스 생성*/
     color: gray;
 }
+
+.btn {
+    cursor: pointer;
+}
+
+
+
+
