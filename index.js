@@ -127,7 +127,7 @@ if (20 > 5 && "junn" === "junn") {
     }
 */
 
-//#2.6 DOM - If else - Function practice
+//#2.6 DOM - If else - Function practice One
 
 const titleTwo = document.querySelector("#titleTwo");
 // const 변수 생성하고 html문서 id를 따와서 대입함.
@@ -151,7 +151,7 @@ function handleClickTwo() {
   }
 }
 
-function init() {
+function initOne() {
   titleTwo.style.color = BASE_COLOR;
   titleTwo.addEventListener("click", handleClickTwo);
   //click 대신 mouseenter로 하면 마우스 갖다댈때마다 색깔이 바뀜.(hover랑 비슷)
@@ -161,7 +161,7 @@ function init() {
   //addEventListener 란 document 내의 특정 요소에 event를 등록할때 사용하는 것이다.
 }
 
-init(); //함수 실행.
+initOne(); //함수 실행.
 
 //HTML JAvaScript DOM event MDN 구글링해서 나온거 실습
 //인터넷 연결되어 있으면 online 문구 출력, 아니면 인터넷 키라고 알림.
@@ -176,3 +176,26 @@ window.addEventListener("offline", handleOffline);
 //online > offline로 변경하면 인터넷 연결 안될 때 "lalalala" 콘솔창에 출력
 
 handleOffline();
+
+//#2.7 DOM - IF else = Function practice Two
+
+const titleThree = document.querySelector("#titleThree");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClickThree() {
+  const currentClass = titleThree.className;
+  if (currentClass !== CLICKED_CLASS) {
+    titleThree.className = CLICKED_CLASS;
+  } else {
+    titleThree.className = "";
+  }
+}
+
+handleClickThree();
+
+function initTwo() {
+  titleThree.addEventListener("click", handleClickThree);
+}
+
+initTwo();

@@ -9,3 +9,13 @@ h1{
 h2{
     color: silver;
 }
+
+/* #2.7 내용 */
+h3{
+    color: #FFC107;
+    transition: color .5s ease-in-out;
+}
+
+.clicked { /*css 내에 클래스 생성*/
+    color: gray;
+}
